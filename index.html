@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Undesktop by undesktop</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/undesktop">View On GitHub</a></li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Undesktop</h1>
+          <p>Desktop sans environment</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/undesktop">undesktop</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h2>
+<a name="mission" class="anchor" href="#mission"><span class="octicon octicon-link"></span></a>Mission</h2>
+
+<p>The Undesktop Project exists to decouple desktop applications from the desktop environment.  We
+work towards this by developing high-quality, modern desktop applications which work on their own.</p>
+
+<h2>
+<a name="technology" class="anchor" href="#technology"><span class="octicon octicon-link"></span></a>Technology</h2>
+
+<p>We understand that making a truly great application requires the best technology.  For this reason,
+we have compiled a shortlist of preferred technologies.  Other technology may be used when
+required.</p>
+
+<ul>
+<li>Vala -- as deep as possible</li>
+<li>C -- never C++, ever</li>
+<li>CMake -- to compile everything</li>
+<li>GTK3 -- for anything with a GUI</li>
+<li>Clutter -- minimized to avoid problems in software rendered environments</li>
+<li>GObject -- vala makes this easy</li>
+</ul><h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>All Undesktop Project code is licensed under the BSD 3-clause license.  All designs and graphics
+are released to the public domain under the terms of the Creative Commons Public Domain (CC0)
+Dedication.</p>
+
+<p>We encourage you to fork our projects if you don't like where we're going, but please do talk to us
+first: we'd like to address your complaints internally first.  However, if you do fork permanently,
+we ask that you change the name and logos (to comply with possible trademarks and with the third
+clause of the license)</p>
+
+<h2>
+<a name="code-standards" class="anchor" href="#code-standards"><span class="octicon octicon-link"></span></a>Code Standards</h2>
+
+<ul>
+<li>Follow the division of model/view/controller.  The view should emit signals which the controller
+then listens to and calls methods on the model.</li>
+<li>Use GResources to compile in things like your <code>.ui</code> files, which don't need to be changed by the
+end user or by packagers.</li>
+<li>Indent with tabs, align with spaces.  For explanation of my reasoning, see <a href="http://lea.verou.me/2012/01/why-tabs-are-clearly-superior/">Lea Verou's post on
+the topic</a>.  She was 100% spot-on.</li>
+<li>Don't write a manpage in groff, seriously.  Nobody fucking knows groff.  Use pandoc markdown
+instead: we have a CMake task which compiles pandoc into groff for manpages.</li>
+<li>Don't play favorites with backends.  If there's like 4 backends (like for network or audio),
+don't just pick one and use it.  Provide an interface which the backend classes can implement.</li>
+<li>Handle your errors as locally as possible, don't let them bubble far.</li>
+<li>Mark your nullable types in Vala, we use <code>--enable-experimental-non-null</code>.  Follow this even when
+you have to disable that flag to use code which doesn't mark nullable types.</li>
+<li>Test your code.  It doesn't have to be perfect, but at least try to get good coverage.</li>
+<li>We use TravisCI</li>
+</ul><h2>
+<a name="the-future" class="anchor" href="#the-future"><span class="octicon octicon-link"></span></a>The Future</h2>
+
+<p>Since we're building on GTK3 and Clutter, we're ready for Wayland and the incoming push to hardware.</p>
+
+<p>Empahsis on systemd stuff</p>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
